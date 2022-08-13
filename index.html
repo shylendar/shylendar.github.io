@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #425c7b; -webkit-text-stroke: #425c7b}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2533c2; -webkit-text-stroke: #2533c2}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #c01356; -webkit-text-stroke: #c01356}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #0d191d; -webkit-text-stroke: #0d191d}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2a3df2; -webkit-text-stroke: #2a3df2}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #1e2e44; -webkit-text-stroke: #1e2e44}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #0d191d; -webkit-text-stroke: #0d191d; min-height: 15.0px}
+    span.s1 {font-kerning: none; color: #1e2e44; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #1e2e44}
+    span.s2 {font-kerning: none; background-color: rgba(13, 25, 29, 0.051)}
+    span.s3 {font-kerning: none; color: #2533c2; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #2533c2}
+    span.s4 {font-kerning: none; color: #2a3df2; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #2a3df2}
+    span.s5 {font-kerning: none; color: #c01356; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #c01356}
+    span.s6 {font-kerning: none; color: #0d191d; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #0d191d}
+    span.s7 {font-kerning: none; color: #425c7b; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #425c7b}
+    span.s8 {font-kerning: none; color: #6235e6; background-color: rgba(13, 25, 29, 0.051); -webkit-text-stroke: 0px #6235e6}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!</span><span class="s2">DOCTYPE html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span><span class="s2">html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span><span class="s2">head</span><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s1">&lt;</span><span class="s3">meta </span><span class="s2">charset</span><span class="s1">="</span><span class="s4">utf-8</span><span class="s1">"&gt;</span></p>
+<p class="p4"><span class="s1">&lt;</span><span class="s3">title</span><span class="s1">&gt;</span><span class="s2">Draw a polygon and calculate its area</span><span class="s1">&lt;/</span><span class="s3">title</span><span class="s1">&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">meta </span><span class="s5">name</span><span class="s1">="</span><span class="s2">viewport</span><span class="s1">"</span><span class="s3"> </span><span class="s5">content</span><span class="s1">="</span><span class="s2">initial-scale=1,maximum-scale=1,user-scalable=no</span><span class="s1">"&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">link </span><span class="s5">href</span><span class="s1">="</span><span class="s2">https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css</span><span class="s1">"</span><span class="s3"> </span><span class="s5">rel</span><span class="s1">="</span><span class="s2">stylesheet</span><span class="s1">"&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">script </span><span class="s5">src</span><span class="s1">="</span><span class="s2">https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js</span><span class="s1">"&gt;&lt;/</span><span class="s3">script</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span><span class="s2">style</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s5">body</span><span class="s6"> </span><span class="s1">{</span><span class="s6"> </span><span class="s2">margin</span><span class="s1">:</span><span class="s6"> 0</span><span class="s1">;</span><span class="s6"> </span><span class="s2">padding</span><span class="s1">:</span><span class="s6"> 0</span><span class="s1">;</span><span class="s6"> </span><span class="s1">}</span></p>
+<p class="p4"><span class="s5">#map</span><span class="s2"> </span><span class="s1">{</span><span class="s2"> </span><span class="s3">position</span><span class="s1">:</span><span class="s2"> absolute</span><span class="s1">;</span><span class="s2"> </span><span class="s3">top</span><span class="s1">:</span><span class="s2"> 0</span><span class="s1">;</span><span class="s2"> </span><span class="s3">bottom</span><span class="s1">:</span><span class="s2"> 0</span><span class="s1">;</span><span class="s2"> </span><span class="s3">width</span><span class="s1">:</span><span class="s2"> 100%</span><span class="s1">;</span><span class="s2"> </span><span class="s1">}</span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">style</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">head</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span><span class="s2">body</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span><span class="s2">style</span><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s2">.calculation-box</span><span class="s6"> </span><span class="s1">{</span></p>
+<p class="p2"><span class="s2">height</span><span class="s1">:</span><span class="s6"> 75px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s3">width</span><span class="s1">:</span><span class="s2"> 150px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s3">position</span><span class="s1">:</span><span class="s2"> absolute</span><span class="s1">;</span></p>
+<p class="p2"><span class="s2">bottom</span><span class="s1">:</span><span class="s6"> 40px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s3">left</span><span class="s1">:</span><span class="s2"> 10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s3">background-color</span><span class="s1">:</span><span class="s2"> </span><span class="s4">rgba</span><span class="s1">(</span><span class="s2">255</span><span class="s1">,</span><span class="s2"> 255</span><span class="s1">,</span><span class="s2"> 255</span><span class="s1">,</span><span class="s2"> 0.9</span><span class="s1">);</span></p>
+<p class="p2"><span class="s2">padding</span><span class="s1">:</span><span class="s6"> 15px</span><span class="s1">;</span></p>
+<p class="p2"><span class="s2">text-align</span><span class="s1">:</span><span class="s6"> center</span><span class="s1">;</span></p>
+<p class="p6"><span class="s2">}</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s5">p</span><span class="s2"> </span><span class="s1">{</span></p>
+<p class="p2"><span class="s2">font-family</span><span class="s1">:</span><span class="s6"> </span><span class="s5">'Open Sans'</span><span class="s1">;</span></p>
+<p class="p2"><span class="s2">margin</span><span class="s1">:</span><span class="s6"> 0</span><span class="s1">;</span></p>
+<p class="p2"><span class="s2">font-size</span><span class="s1">:</span><span class="s6"> 13px</span><span class="s1">;</span></p>
+<p class="p6"><span class="s2">}</span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">style</span><span class="s1">&gt;</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">script </span><span class="s5">src</span><span class="s1">="</span><span class="s2">https://unpkg.com/@turf/turf@6/turf.min.js</span><span class="s1">"&gt;&lt;/</span><span class="s3">script</span><span class="s1">&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">script </span><span class="s5">src</span><span class="s1">="</span><span class="s2">https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.2/mapbox-gl-draw.js</span><span class="s1">"&gt;&lt;/</span><span class="s3">script</span><span class="s1">&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">link </span><span class="s5">rel</span><span class="s1">="</span><span class="s2">stylesheet</span><span class="s1">"</span><span class="s3"> </span><span class="s5">href</span><span class="s1">="</span><span class="s2">https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.2/mapbox-gl-draw.css</span><span class="s1">"</span><span class="s3"> </span><span class="s5">type</span><span class="s1">="</span><span class="s2">text/css</span><span class="s1">"&gt;</span></p>
+<p class="p6"><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">id</span><span class="s2">="</span><span class="s4">map</span><span class="s2">"&gt;&lt;/</span><span class="s3">div</span><span class="s2">&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s1">="</span><span class="s2">calculation-box</span><span class="s1">"&gt;</span></p>
+<p class="p4"><span class="s1">&lt;</span><span class="s3">p</span><span class="s1">&gt;</span><span class="s2">Click the map to draw a polygon.</span><span class="s1">&lt;/</span><span class="s3">p</span><span class="s1">&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s3">div </span><span class="s5">id</span><span class="s1">="</span><span class="s2">calculated-area</span><span class="s1">"&gt;&lt;/</span><span class="s3">div</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">&lt;</span><span class="s2">script</span><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s6"><span class="Apple-tab-span">	</span>mapboxgl</span><span class="s1">.</span><span class="s6">accessToken </span><span class="s1">=</span><span class="s6"> </span><span class="s2">'pk.eyJ1Ijoic2h5bGVuZGFyIiwiYSI6ImNrc2Z6YjEyYzB5NDMydnRicjNrYzVtZDQifQ.iIluk3XzRGSznGNEpBRxgQ'</span><span class="s1">;</span></p>
+<p class="p5"><span class="s3">const</span><span class="s6"> map </span><span class="s1">=</span><span class="s6"> </span><span class="s3">new</span><span class="s6"> </span><span class="s2">mapboxgl</span><span class="s1">.</span><span class="s2">Map</span><span class="s1">({</span></p>
+<p class="p1"><span class="s6">container</span><span class="s1">:</span><span class="s6"> </span><span class="s5">'map'</span><span class="s1">,</span><span class="s6"> </span><span class="s2">// container ID</span></p>
+<p class="p3"><span class="s6">style</span><span class="s1">:</span><span class="s6"> </span><span class="s2">'mapbox://styles/mapbox/satellite-v9'</span><span class="s1">,</span><span class="s6"> </span><span class="s7">// style URL</span></p>
+<p class="p1"><span class="s6">center</span><span class="s1">:</span><span class="s6"> </span><span class="s1">[-</span><span class="s8">91.874</span><span class="s1">,</span><span class="s6"> </span><span class="s8">42.76</span><span class="s1">],</span><span class="s6"> </span><span class="s2">// starting position [lng, lat]</span></p>
+<p class="p1"><span class="s6">zoom</span><span class="s1">:</span><span class="s6"> </span><span class="s8">12</span><span class="s6"> </span><span class="s2">// starting zoom</span></p>
+<p class="p6"><span class="s2">});</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s3">const</span><span class="s6"> draw </span><span class="s1">=</span><span class="s6"> </span><span class="s3">new</span><span class="s6"> </span><span class="s2">MapboxDraw</span><span class="s1">({</span></p>
+<p class="p4"><span class="s2">displayControlsDefault</span><span class="s1">:</span><span class="s2"> </span><span class="s8">false</span><span class="s1">,</span></p>
+<p class="p1"><span class="s2">// Select which mapbox-gl-draw control buttons to add to the map.</span></p>
+<p class="p4"><span class="s2">controls</span><span class="s1">:</span><span class="s2"> </span><span class="s1">{</span></p>
+<p class="p4"><span class="s2">polygon</span><span class="s1">:</span><span class="s2"> </span><span class="s8">true</span><span class="s1">,</span></p>
+<p class="p4"><span class="s2">trash</span><span class="s1">:</span><span class="s2"> </span><span class="s8">true</span></p>
+<p class="p6"><span class="s2">},</span></p>
+<p class="p1"><span class="s2">// Set mapbox-gl-draw to draw by default.</span></p>
+<p class="p1"><span class="s2">// The user does not have to click the polygon control button first.</span></p>
+<p class="p3"><span class="s6">defaultMode</span><span class="s1">:</span><span class="s6"> </span><span class="s2">'draw_polygon'</span></p>
+<p class="p6"><span class="s2">});</span></p>
+<p class="p5"><span class="s6">map</span><span class="s1">.</span><span class="s2">addControl</span><span class="s1">(</span><span class="s6">draw</span><span class="s1">);</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s2">map</span><span class="s1">.</span><span class="s4">on</span><span class="s1">(</span><span class="s5">'draw.create'</span><span class="s1">,</span><span class="s2"> updateArea</span><span class="s1">);</span></p>
+<p class="p4"><span class="s2">map</span><span class="s1">.</span><span class="s4">on</span><span class="s1">(</span><span class="s5">'draw.delete'</span><span class="s1">,</span><span class="s2"> updateArea</span><span class="s1">);</span></p>
+<p class="p4"><span class="s2">map</span><span class="s1">.</span><span class="s4">on</span><span class="s1">(</span><span class="s5">'draw.update'</span><span class="s1">,</span><span class="s2"> updateArea</span><span class="s1">);</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s3">function</span><span class="s6"> </span><span class="s2">updateArea</span><span class="s1">(</span><span class="s6">e</span><span class="s1">)</span><span class="s6"> </span><span class="s1">{</span></p>
+<p class="p4"><span class="s3">const</span><span class="s2"> data </span><span class="s1">=</span><span class="s2"> draw</span><span class="s1">.</span><span class="s4">getAll</span><span class="s1">();</span></p>
+<p class="p4"><span class="s3">const</span><span class="s2"> answer </span><span class="s1">=</span><span class="s2"> document</span><span class="s1">.</span><span class="s4">getElementById</span><span class="s1">(</span><span class="s5">'calculated-area'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s3">if</span><span class="s2"> </span><span class="s1">(</span><span class="s2">data</span><span class="s1">.</span><span class="s2">features</span><span class="s1">.</span><span class="s2">length </span><span class="s1">&gt;</span><span class="s2"> </span><span class="s8">0</span><span class="s1">)</span><span class="s2"> </span><span class="s1">{</span></p>
+<p class="p4"><span class="s3">const</span><span class="s2"> area </span><span class="s1">=</span><span class="s2"> turf</span><span class="s1">.</span><span class="s4">area</span><span class="s1">(</span><span class="s2">data</span><span class="s1">);</span></p>
+<p class="p1"><span class="s2">// Restrict the area to 2 decimal points.</span></p>
+<p class="p4"><span class="s3">const</span><span class="s2"> rounded_area </span><span class="s1">=</span><span class="s2"> Math</span><span class="s1">.</span><span class="s4">round</span><span class="s1">(</span><span class="s2">area </span><span class="s1">*</span><span class="s2"> </span><span class="s8">100</span><span class="s1">)</span><span class="s2"> </span><span class="s1">/</span><span class="s2"> </span><span class="s8">100</span><span class="s1">;</span></p>
+<p class="p3"><span class="s6">answer</span><span class="s1">.</span><span class="s6">innerHTML </span><span class="s1">=</span><span class="s6"> </span><span class="s2">`&lt;p&gt;&lt;strong&gt;</span><span class="s1">${</span><span class="s6">rounded_area</span><span class="s1">}</span><span class="s2">&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;square meters&lt;/p&gt;`</span><span class="s1">;</span></p>
+<p class="p2"><span class="s1">}</span><span class="s6"> </span><span class="s2">else</span><span class="s6"> </span><span class="s1">{</span></p>
+<p class="p4"><span class="s2">answer</span><span class="s1">.</span><span class="s2">innerHTML </span><span class="s1">=</span><span class="s2"> </span><span class="s5">''</span><span class="s1">;</span></p>
+<p class="p3"><span class="s3">if</span><span class="s6"> </span><span class="s1">(</span><span class="s6">e</span><span class="s1">.</span><span class="s6">type </span><span class="s1">!==</span><span class="s6"> </span><span class="s2">'draw.delete'</span><span class="s1">)</span></p>
+<p class="p3"><span class="s4">alert</span><span class="s1">(</span><span class="s2">'Click the map to draw a polygon.'</span><span class="s1">);</span></p>
+<p class="p6"><span class="s2">}</span></p>
+<p class="p6"><span class="s2">}</span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">script</span><span class="s1">&gt;</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">body</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/</span><span class="s2">html</span><span class="s1">&gt;</span></p>
+</body>
+</html>
